@@ -44,7 +44,6 @@
       - libapparmor1
       - libssl0.9.8
   - name: get rstudio-server
-    #command: /usr/bin/wget http://download2.rstudio.org/{{rstudio}} -O /tmp/{{rstudio}} creates=/var/lib/rstudio-server/installed
     get_url: url=http://download2.rstudio.org/{{rstudio}} dest=/tmp/{{rstudio}} owner=root
   - name: install rstudio-server
     script: ./scripts/install_rstudio-server.sh /tmp/{{rstudio}} creates=/var/lib/rstudio-server/installed
