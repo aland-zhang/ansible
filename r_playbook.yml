@@ -1,7 +1,7 @@
 ---
 - hosts: "{{ target }}"
   vars:
-    myuser: takeshi
+    myuser: hoge
     rstudio: rstudio-server-0.98.1103-amd64.deb
     ntp_srv_addr: 192.168.0.2
 
@@ -14,7 +14,7 @@
   - name: add a new user
     user: name={{myuser}} shell=/bin/bash password=$1$3FCsXQtq$EKWn6gqWXj6Gto9ogr.1s. groups=sudo append=yes
   - name: ssh pub key setting
-    authorized_key: user={{myuser}} key="{{ lookup('file','/home/takeshi/Ansible/R_studio/files/secret.key.pub') }}"
+    authorized_key: user={{myuser}} key="{{ lookup('file','./files/secret.key.pub') }}"
   
   - name: utils install
     apt: pkg={{item}} state=latest update_cache=yes
