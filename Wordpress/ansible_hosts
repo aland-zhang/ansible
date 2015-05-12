@@ -1,0 +1,1 @@
+192.168.2.10 ansible_ssh_private_key_file=/home/takeshi/vagrant/centos-7.0/.vagrant/machines/default/virtualbox/private_key
