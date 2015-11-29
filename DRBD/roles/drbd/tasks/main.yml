@@ -1,0 +1,13 @@
+- name: Add Repository for DRBD9
+  template: src=linbit.repo.j2 dest=/etc/yum.repos.d/linbit.repo owner=root group=root mode=0644
+
+- name: DRBD Package Install Install
+  yum: pkg={{ item }} state=latest
+  with_items:
+    - NetworkManager
+    - NetworkManager-tui
+    - lvm2
+    - kmod-drbd
+    - drbd
+    - drbdmanage
+  environment: proxy_env

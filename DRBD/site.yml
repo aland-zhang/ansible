@@ -1,0 +1,11 @@
+---
+- hosts: drbd
+  gather_facts: no
+
+  remote_user: centos
+  sudo: yes
+
+  roles:
+    - common
+    - drbd
+

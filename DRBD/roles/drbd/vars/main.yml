@@ -1,0 +1,3 @@
+version: drbd-9.0
+hash_id: hash-values
+rh_version: rhel7.1

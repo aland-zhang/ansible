@@ -1,0 +1,7 @@
+- name: Changing root password
+  tags: pass
+  user: name=root password=root update_password=on_create
+
+- name: Postfix stop and disable
+  tags: postfix
+  service: name=postfix state=stopped enabled=no
