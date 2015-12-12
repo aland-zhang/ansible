@@ -10,4 +10,4 @@
     - kmod-drbd
     - drbd
     - drbdmanage
-  #environment: proxy_env
+  environment: proxy_env
