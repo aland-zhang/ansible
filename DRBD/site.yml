@@ -2,10 +2,11 @@
 - hosts: drbd
   gather_facts: no
 
-  remote_user: centos
+  remote_user: root
   sudo: yes
 
   roles:
+    - tkhome
     - common
     - drbd
 
